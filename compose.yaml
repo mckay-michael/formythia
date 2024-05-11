@@ -1,0 +1,10 @@
+services:
+  formythia:
+    build: 
+      context: .
+    ports:
+      - 19135:25565
+    volumes:
+      - ./world:/app/world
+      - ./mods:/app/mods
+      - ./datapacks:/app/world/datapacks
