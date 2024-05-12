@@ -8,3 +8,4 @@ services:
       - ./world:/app/world
       - ./mods:/app/mods
       - ./datapacks:/app/world/datapacks
+    restart: always
