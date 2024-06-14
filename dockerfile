@@ -4,14 +4,13 @@ WORKDIR /app
 
 RUN apt install curl
 
-RUN curl -J https://meta.fabricmc.net/v2/versions/loader/1.20.2/0.15.11/1.0.1/server/jar > server.jar
+RUN curl -J https://meta.fabricmc.net/v2/versions/loader/1.21/0.15.11/1.0.1/server/jar > server.jar
 
 RUN java -Xmx2G -jar server.jar nogui
 
 RUN echo "eula=true" > eula.txt
 
 RUN echo "max-players=5" >> server.properties
-RUN echo "level-seed=-950547527103331411" >> server.properties
 RUN echo "spawn-protection=0" >> server.properties
 RUN echo "view-distance=32" >> server.properties
 
