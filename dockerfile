@@ -14,7 +14,7 @@ RUN echo "max-players=5" >> server.properties
 RUN echo "spawn-protection=0" >> server.properties
 RUN echo "view-distance=32" >> server.properties
 
-# COPY ./datapacks/ /app/world/datapacks/
+COPY ./datapacks/ /app/world/datapacks/
 COPY ./mods/ /app/mods/
 
 RUN echo '[{"uuid":"99676602-849d-4f68-b247-cd835fddaee9","name":"Spudy48","level":4}]' >> ops.json
